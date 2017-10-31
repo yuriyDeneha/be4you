@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of flowersObservable | async">
+    <h4>{{item.name}}</h4>
+    <span>{{item.type}}</span>
+    <p>{{item.description}}</p>
+  </li>
+</ul>

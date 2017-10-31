@@ -5,7 +5,7 @@ export const environment = {
     authDomain: 'be4you-project.firebaseapp.com',
     databaseURL: 'https://be4you-project.firebaseio.com',
     projectId: 'be4you-project',
-    storageBucket: '',
+    storageBucket: 'be4you-project.appspot.com',
     messagingSenderId: '1084111501849'
   }
 };
