@@ -8,15 +8,17 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+//Material design modules
+import { MatButtonModule } from '@angular/material';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { ContentComponent } from './components/content/content.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
 
-//Material design modules
-import { MatButtonModule } from '@angular/material';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { MatButtonModule } from '@angular/material';
     TopBarComponent,
     ContentComponent,
     ShopComponent,
-    AuthComponent
+    AuthComponent,
+    QuickOrderComponent
   ],
   imports: [
     BrowserModule,
