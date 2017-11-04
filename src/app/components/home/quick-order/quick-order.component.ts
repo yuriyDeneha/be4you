@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class QuickOrderComponent implements OnInit {
   @Input() state: any;
 
-  staticUrl = '../../../assets/images/';
+  staticUrlToFile = 'assets/images/';
   item = {
     src: 'flowers.png',
     price: 300
@@ -17,6 +17,10 @@ export class QuickOrderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  autoCompleteCallback1(selectedData: any) {
+    console.log(selectedData.formatted_address);
   }
 
 }

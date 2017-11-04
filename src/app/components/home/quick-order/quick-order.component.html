@@ -4,26 +4,24 @@
     <div class="animation-circle animation-circle-1"></div>
     <div class="animation-circle animation-circle-2"></div>
     <div class="animation-circle animation-circle-3"></div>
-
-    <img src="{{staticUrl + item.src}}" alt="flowers">
-
-    <div class="extended-features">
-      <div class="arrow-controls">
-        <span class="arrow"></span>
-        <span class="arrow"></span>
+    <div class="flower-container">
+      <img src="{{staticUrlToFile + item.src}}" alt="flowers">
+      <div [hidden]="!state" class="arrow-controls">
+        <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
+        <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
       </div>
     </div>
 
     <div class="additional-info-block">
-
       <div class="circle-detail price">
         <p>{{item.price}}<span> UAH</span></p>
       </div>
       <div class="circle-detail delivery">
         <p>Безкоштовна доставка</p>
       </div>
-
     </div>
-
+    <form [hidden]="!state">
+      <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
+    </form>
   </div>
 </div>
