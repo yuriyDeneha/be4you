@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  orderState = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeOrderState() {
+    this.orderState = !this.orderState;
   }
 
 }

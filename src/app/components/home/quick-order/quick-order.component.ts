@@ -1,0 +1,22 @@
+import {Component, Input, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'quick-order',
+  templateUrl: './quick-order.component.html',
+  styleUrls: ['./quick-order.component.sass']
+})
+export class QuickOrderComponent implements OnInit {
+  @Input() state: any;
+
+  staticUrl = '../../../assets/images/';
+  item = {
+    src: 'flowers.png',
+    price: 300
+  };
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

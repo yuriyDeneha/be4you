@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+
+import { AngularFireModule } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -8,12 +12,20 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./content.component.sass']
 })
 export class ContentComponent implements OnInit {
-  flowersObservable: Observable<any[]>;
+  flowers$: Observable<any[]>;
+  userId: string;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth, private firebase: AngularFireModule) {
+  }
 
   ngOnInit() {
-    this.flowersObservable = this.getFlowers('/flowers');
+    this.afAuth.authState.subscribe(user => {
+      if (user) {
+        this.userId = user.uid;
+      }
+    });
+    this.flowers$ = this.getFlowers('/flowers');
+
   }
 
   getFlowers(listPath): Observable<any[]> {
