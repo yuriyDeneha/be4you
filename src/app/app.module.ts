@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 
 //Material design modules
 import { MatButtonModule } from '@angular/material';
@@ -37,6 +38,7 @@ import { QuickOrderComponent } from './components/home/quick-order/quick-order.c
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    Ng4GeoautocompleteModule.forRoot(),
     // material elements
     MatButtonModule,
   ],

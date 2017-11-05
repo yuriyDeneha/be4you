@@ -14,13 +14,7 @@
     background-color: #fff
     transition: transform 0.4s, width 1s 1s, height 1s 1s
     color: #222
-    img
-      pointer-events: none
-      border-radius: 50%
-      width: 70%
-      height: 70%
-      z-index: 2
-      transition: width 1s 1s, height 1s 1s
+    flex-direction: column
     &:before
       content: 'Натисніть для швидкої покупки'
       pointer-events: none
@@ -53,6 +47,34 @@
       display: none
       transition: 3s
 
+    .flower-container
+      position: relative
+      width: 100%
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      .arrow-controls
+        position: absolute
+        width: 80%
+        display: flex
+        justify-content: space-between
+        .arrow
+          width: 20px
+          height: 20px
+          &:nth-child(1)
+            transform: rotate(90deg)
+          &:nth-child(2)
+            transform: rotate(-90deg)
+      img
+        display: block
+        pointer-events: none
+        border-radius: 50%
+        width: 70%
+        height: 70%
+        z-index: 2
+        transition: width 1s 1s, height 1s 1s
+
     .animation-circle-1
       animation-delay: 0.5s
     .animation-circle-2
@@ -66,9 +88,10 @@
       //pointer-events: none
       &:before
         opacity: 0
-      img
-        width: 40%
-        height: 40%
+      .flower-container
+        img
+          width: 40%
+          height: 40%
       &:hover
         cursor: default
         transform: scale(1)
