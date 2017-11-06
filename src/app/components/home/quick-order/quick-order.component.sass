@@ -1,112 +1,99 @@
-.container
+.order-wrapper
+  user-select: none
+  border-radius: 50%
   display: flex
-  justify-content: center
   align-items: center
-  .order-wrapper
-    user-select: none
+  justify-content: center
+  transition: transform 0.4s, width 1s 1s, height 1s 1s
+  color: #222
+  position: relative
+
+  .white-bg-wrapper
     position: absolute
-    border-radius: 50%
     height: 120px
     width: 120px
+    border-radius: 50%
+    transition: transform 0.4s, width 1s 0s, height 1s 0s
     display: flex
     align-items: center
     justify-content: center
     background-color: #fff
-    transition: transform 0.4s, width 1s 1s, height 1s 1s
-    color: #222
-    flex-direction: column
+    &.extended
+      height: 600px
+      width: 600px
+      transition: transform 0.4s, width 1s 1s, height 1s 1s
+      &:before
+        opacity: 0
+      &:after
+        transition: width 1s 1s, height 1s 1s
+        width: 40%
+        height: 40%
+    &:hover
+      cursor: pointer
+      transform: scale(1.05)
     &:before
       content: 'Натисніть для швидкої покупки'
       pointer-events: none
       display: block
       position: absolute
       left: 50%
-      top: -80px
+      top: -60px
       width: 250px
       text-align: center
       color: #fff
       transform: translateX(-50%)
       font-size: 18px
       transition: opacity 1s
-    .animation-circle
-      pointer-events: none
+    &:after
+      content: ''
       position: absolute
-      opacity: 1
-      background: #fff
+      width: 70%
+      height: 70%
       border-radius: 50%
-      transition: opacity 0.2s cubic-bezier(0.86, 0.14, 0, 0.86)
-      height: 120px
-      width: 120px
-      animation: ripple-1 3000ms infinite
-    &:hover
-      cursor: pointer
-      transform: scale(1.05)
+      background: url('/assets/images/flowers.png') no-repeat
+      background-position: center
+      background-size: cover
+      z-index: 3
 
-    .additional-info-block
-      opacity: 0
-      display: none
-      transition: 3s
 
-    .flower-container
+
+  .extended-part-wrapper
+    opacity: 0
+    transition: opacity 0.5s 0s
+    z-index: 3
+    pointer-events: none
+    position: absolute
+    &.visible
       position: relative
-      width: 100%
-      text-align: center
-      display: flex
-      align-items: center
-      justify-content: center
-      .arrow-controls
-        position: absolute
-        width: 80%
-        display: flex
-        justify-content: space-between
-        .arrow
-          width: 20px
-          height: 20px
-          &:nth-child(1)
-            transform: rotate(90deg)
-          &:nth-child(2)
-            transform: rotate(-90deg)
-      img
-        display: block
-        pointer-events: none
-        border-radius: 50%
-        width: 70%
-        height: 70%
-        z-index: 2
-        transition: width 1s 1s, height 1s 1s
-
-    .animation-circle-1
-      animation-delay: 0.5s
-    .animation-circle-2
-      animation-delay: 1.0s
-    .animation-circle-3
-      animation-delay: 1.5s
-
-    &.extended
-      height: 600px
-      width: 600px
-      //pointer-events: none
-      &:before
-        opacity: 0
-      .flower-container
-        img
-          width: 40%
-          height: 40%
-      &:hover
-        cursor: default
-        transform: scale(1)
-
-      .animation-circle
+      visibility: visible
+      opacity: 1
+      transition: opacity 0.5s 1.5s
+      pointer-events: initial
+      .container
         height: 600px
         width: 600px
-        animation: ripple-2 3000ms infinite
-        transition: width 1s 1s, height 1s 1s
-      .animation-circle-1
-        animation-delay: 0.5s
-      .animation-circle-2
-        animation-delay: 1.0s
-      .animation-circle-3
-        animation-delay: 1.5s
+    .container
+      width: 100%
+      position: relative
+      justify-content: center
+      .flower-container
+        height: 30%
+        position: relative
+        width: 100%
+        text-align: center
+        .arrow-controls
+          width: 70%
+          margin: 0 auto
+          display: flex
+          justify-content: space-between
+          .arrow
+            width: 20px
+            height: 20px
+            &:nth-child(1)
+              transform: rotate(90deg)
+            &:nth-child(2)
+              transform: rotate(-90deg)
+
       .additional-info-block
         position: absolute
         width: 100%
@@ -114,10 +101,12 @@
         opacity: 1
         transition: 3s
         display: block
+        top: 0
+        left: 0
         .circle-detail
           position: absolute
-          width: 150px
-          height: 150px
+          width: 23%
+          height: 23%
           background-color: #fff
           border-radius: 50%
           display: flex
@@ -145,21 +134,7 @@
               font-size: 20px
               letter-spacing: 1px
               text-align: center
-
-
-@keyframes ripple-1
-  0%
-    transform: scale(1)
-    opacity: 0.4
-  100%
-    transform: scale(2.5)
-    opacity: 0.0
-    visibility: hidden
-@keyframes ripple-2
-  0%
-    transform: scale(1)
-    opacity: 0.4
-  100%
-    transform: scale(1.4)
-    opacity: 0.0
-    visibility: hidden
+      form
+        width: 40%
+        margin: 0 auto
+        margin-top: 200px

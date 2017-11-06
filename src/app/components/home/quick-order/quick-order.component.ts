@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./quick-order.component.sass']
 })
 export class QuickOrderComponent implements OnInit {
-  @Input() state: any;
+  @Input() extended: any;
 
   staticUrlToFile = 'assets/images/';
   item = {
@@ -22,5 +22,6 @@ export class QuickOrderComponent implements OnInit {
   autoCompleteCallback1(selectedData: any) {
     console.log(selectedData.formatted_address);
   }
+
 
 }

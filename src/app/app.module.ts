@@ -19,6 +19,7 @@ import { ContentComponent } from './components/content/content.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
+import { WaveEffectComponent } from './components/common/wave-effect/wave-effect.component';
 
 
 
@@ -30,7 +31,8 @@ import { QuickOrderComponent } from './components/home/quick-order/quick-order.c
     ContentComponent,
     ShopComponent,
     AuthComponent,
-    QuickOrderComponent
+    QuickOrderComponent,
+    WaveEffectComponent
   ],
   imports: [
     BrowserModule,
