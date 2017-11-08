@@ -1,3 +1,5 @@
+@import 'ng4-geoautocomplete.css'
+
 .order-wrapper
   user-select: none
   border-radius: 50%
@@ -61,7 +63,6 @@
     opacity: 0
     transition: opacity 0.5s 0s
     z-index: 3
-    pointer-events: none
     position: absolute
     &.visible
       position: relative
@@ -103,6 +104,7 @@
         display: block
         top: 0
         left: 0
+        z-index: 0
         .circle-detail
           position: absolute
           width: 23%
@@ -134,7 +136,14 @@
               font-size: 20px
               letter-spacing: 1px
               text-align: center
-      form
+      form.order-data
         width: 40%
         margin: 0 auto
         margin-top: 200px
+        z-index: 3
+        ng4geo-autocomplete
+          position: relative
+
+
+
+

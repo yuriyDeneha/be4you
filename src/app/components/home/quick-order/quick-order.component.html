@@ -7,18 +7,7 @@
 
   <div class="extended-part-wrapper" [ngClass]="{'visible': extended}">
     <div class="container">
-      <div class="flower-container" >
-        <!--<img class="product" src="{{staticUrlToFile + item.src}}" alt="flowers">-->
-        <div class="arrow-controls">
-          <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
-          <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
-        </div>
-      </div>
 
-      <form>
-        <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
-        <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
-      </form>
 
       <div class="additional-info-block">
         <div class="circle-detail price">
@@ -28,6 +17,20 @@
           <p>Безкоштовна доставка</p>
         </div>
       </div>
+
+      <div class="flower-container">
+        <!--<img class="product" src="{{staticUrlToFile + item.src}}" alt="flowers">-->
+        <div class="arrow-controls">
+          <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
+          <img class="arrow" src="{{staticUrlToFile + 'arrow.svg'}}">
+        </div>
+      </div>
+
+      <form class="order-data">
+        <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
+        <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
+      </form>
+
 
     </div>
   </div>

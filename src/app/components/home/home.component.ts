@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   changeOrderState() {
-    this.orderState = !this.orderState;
+    this.orderState = true;
   }
 
 }

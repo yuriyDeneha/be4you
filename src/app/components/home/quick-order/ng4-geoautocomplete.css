@@ -1,0 +1,15 @@
+.order-wrapper .extended-part-wrapper .container form.order-data {
+  position: relative;
+}
+:host  /deep/ .custom-autocomplete{
+    color: red;
+}
+  /*.custom-autocomplete*/
+  /*display: block*/
+  /*overflow: hidden*/
+  /*.custom-autocomplete__container*/
+  /*display: block*/
+  /*.custom-autocomplete__input.button-included*/
+  /*display: block*/
+  /*input*/
+  /*padding: 5px*/
