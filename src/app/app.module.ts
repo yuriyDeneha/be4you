@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
 import {environment} from '../environments/environment';
+import { NgModule } from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule} from 'angularfire2';
@@ -10,7 +12,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 
 //Material design modules
-import { MatButtonModule } from '@angular/material';
+import {MatButtonModule, MatInputModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +22,10 @@ import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
 import { WaveEffectComponent } from './components/common/wave-effect/wave-effect.component';
+import {HttpModule} from '@angular/http';
+import { DataInputComponent } from './components/common/data-input/data-input.component';
+import { UserFormInfoComponent } from './components/home/quick-order/user-form-info/user-form-info.component';
+import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
 
 
 
@@ -32,10 +38,17 @@ import { WaveEffectComponent } from './components/common/wave-effect/wave-effect
     ShopComponent,
     AuthComponent,
     QuickOrderComponent,
-    WaveEffectComponent
+    WaveEffectComponent,
+    DataInputComponent,
+    UserFormInfoComponent,
+    ChooseFlowersComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
@@ -43,6 +56,7 @@ import { WaveEffectComponent } from './components/common/wave-effect/wave-effect
     Ng4GeoautocompleteModule.forRoot(),
     // material elements
     MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

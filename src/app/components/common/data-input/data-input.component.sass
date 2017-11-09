@@ -1,0 +1,32 @@
+.data-input-wrapper
+  display: flex
+  justify-content: space-between
+  width: 100%
+  .data-item
+    width: 30%
+    label
+      display: block
+      font-size: 14px
+    input
+      width: 100%
+      padding: 5px
+      border: none
+      border-bottom: 2px solid #bebebe
+      font-size: 15px
+      height: 35px
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+      outline: none
+      text-align: center
+      font-family: FuturaDemi
+      &:focus
+        border-color: #6f6f6f
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        margin: 0
+      &#time::-webkit-datetime-edit-ampm-field
+        display: none
+      &#time::-webkit-clear-button
+        display: none

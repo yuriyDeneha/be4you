@@ -4,10 +4,15 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ShopComponent} from './components/shop/shop.component';
 import {AuthComponent} from './components/auth/auth.component';
+import {UserFormInfoComponent} from './components/home/quick-order/user-form-info/user-form-info.component';
+import {ChooseFlowersComponent} from './components/home/quick-order/choose-flowers/choose-flowers.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, children: [
+    { path: 'choose', component: ChooseFlowersComponent },
+    { path: 'fill', component: UserFormInfoComponent },
+  ]},
   { path: 'auth', component: AuthComponent },
   { path: 'shop', component: ShopComponent },
 ];

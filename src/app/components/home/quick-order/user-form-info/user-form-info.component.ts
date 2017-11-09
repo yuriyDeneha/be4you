@@ -1,23 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-
 @Component({
-  selector: 'quick-order',
-  templateUrl: './quick-order.component.html',
-  styleUrls: ['./quick-order.component.sass']
+  selector: 'app-user-form-info',
+  templateUrl: './user-form-info.component.html',
+  styleUrls: ['./user-form-info.component.sass']
 })
-export class QuickOrderComponent implements OnInit {
-  @Input() extended: any;
+export class UserFormInfoComponent implements OnInit {
 
   staticUrlToFile = 'assets/images/';
-  item = {
-    src: 'flowers.png',
-    price: 300
-  };
-
   dataFormControl = new FormControl('', [Validators.required]);
 
   autoCompleteSettings = {
@@ -36,6 +29,5 @@ export class QuickOrderComponent implements OnInit {
   autoCompleteCallback1(selectedData: any) {
     console.log(selectedData.formatted_address);
   }
-
 
 }
