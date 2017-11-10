@@ -3,6 +3,7 @@ import {environment} from '../environments/environment';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpModule} from '@angular/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,11 +22,12 @@ import { ContentComponent } from './components/content/content.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
-import { WaveEffectComponent } from './components/common/wave-effect/wave-effect.component';
-import {HttpModule} from '@angular/http';
-import { DataInputComponent } from './components/common/data-input/data-input.component';
+import { WaveEffectComponent } from './common/wave-effect/wave-effect.component';
+import { DataInputComponent } from './common/data-input/data-input.component';
 import { UserFormInfoComponent } from './components/home/quick-order/user-form-info/user-form-info.component';
 import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
+import { CatalogComponent } from './components/shop/catalog/catalog.component';
+import { FavouritesComponent } from './components/shop/favourites/favourites.component';
 
 
 
@@ -41,7 +43,9 @@ import { ChooseFlowersComponent } from './components/home/quick-order/choose-flo
     WaveEffectComponent,
     DataInputComponent,
     UserFormInfoComponent,
-    ChooseFlowersComponent
+    ChooseFlowersComponent,
+    CatalogComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,

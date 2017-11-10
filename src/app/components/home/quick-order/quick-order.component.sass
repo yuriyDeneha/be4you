@@ -1,4 +1,7 @@
 
+@import '~app/common/commonStyle'
+
+
 .order-wrapper
   user-select: none
   border-radius: 50%
@@ -79,13 +82,24 @@
       position: relative
       justify-content: center
       nav.steps
-        width: 100px
-        margin: 0 auto
+        width: 150px
+        margin: 100px auto 0
+        text-align: center
         ul>li
           list-style-type: none
           display: inline-block
-          border-bottom: 2px solid
-          color: $grey
+          a
+            padding: 5px 15px
+            margin: 0 3px
+            border-bottom: 2px solid $grey
+            color: $grey
+            cursor: pointer
+            transition: color 0.3s ease-in-out
+            font-family: FuturaDemi
+            font-size: 15px
+            &:hover
+              border-color: $dark-grey
+              color: $dark-grey
 
       .additional-info-block
         position: absolute
@@ -96,7 +110,7 @@
         display: block
         top: 0
         left: 0
-        z-index: 0
+        z-index: -1
         .circle-detail
           position: absolute
           width: 20%

@@ -8,14 +8,6 @@
   <div class="extended-part-wrapper" [ngClass]="{'visible': extended}">
     <div class="container">
 
-      <nav class="steps">
-        <ul>
-          <li><a class="step step-1">1</a></li>
-          <li><a class="step step-2">2</a></li>
-        </ul>
-      </nav>
-
-
       <div class="additional-info-block">
         <div class="circle-detail price">
           <p>{{item.price}}<span> UAH</span></p>
@@ -24,6 +16,17 @@
           <p>Безкоштовна доставка</p>
         </div>
       </div>
+
+
+      <nav class="steps">
+        <ul>
+          <li><a class="step step-1">1</a></li>
+          <li><a class="step step-2">2</a></li>
+        </ul>
+      </nav>
+
+
+
 
       <router-outlet></router-outlet>
 
