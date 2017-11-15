@@ -28,6 +28,7 @@ import { UserFormInfoComponent } from './components/home/quick-order/user-form-i
 import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
 import { CatalogComponent } from './components/shop/catalog/catalog.component';
 import { FavouritesComponent } from './components/shop/favourites/favourites.component';
+import {ProductsService} from './services/products.service';
 
 
 
@@ -62,7 +63,7 @@ import { FavouritesComponent } from './components/shop/favourites/favourites.com
     MatButtonModule,
     MatInputModule,
   ],
-  providers: [],
+  providers: [ ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
