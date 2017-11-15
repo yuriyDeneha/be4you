@@ -1,7 +1,17 @@
 <div class="flower-container">
   <!--<img class="product" src="{{staticUrlToFile + item.src}}" alt="flowers">-->
-  <div class="arrow-controls">
+  <div class="flower-control">
     <img class="arrow" src='assets/images/arrow.svg'>
+    <div class="image-wrapper">
+      <img src="{{ staticUrlToFile + item.src}}" alt="flowers">
+    </div>
     <img class="arrow" src='assets/images/arrow.svg'>
   </div>
+
+  <div class="info-wrapper">
+    <p class="title">{{item.title}}</p>
+    <p class="price">{{item.price}}<span class="zeros">00</span></p>
+
+  </div>
+
 </div>

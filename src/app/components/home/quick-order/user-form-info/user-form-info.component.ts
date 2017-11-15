@@ -19,6 +19,7 @@ export class UserFormInfoComponent implements OnInit {
     geoCountryRestriction: ['ua'],
     geoLocation: [49.85, 24.0166666667],
     geoRadius: 3,
+    showSearchButton: false,
     showCurrentLocation: false,
   };
   constructor() { }

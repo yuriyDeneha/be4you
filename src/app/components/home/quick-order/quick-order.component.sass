@@ -28,11 +28,7 @@
       transition: transform 0.4s, width 1s 1s, height 1s 1s
       &:before
         opacity: 0
-      &:after
-        transition: width 1s 1s, height 1s 1s, box-shadow 1s
-        width: 35%
-        height: 35%
-        animation: down-up 4000ms infinite
+
 
     &:hover
       cursor: pointer
@@ -50,17 +46,6 @@
       transform: translateX(-50%)
       font-size: 18px
       transition: opacity 1s
-    &:after
-      content: ''
-      position: relative
-      width: 70%
-      height: 70%
-      border-radius: 50%
-      background: url('/assets/images/flowers.png') no-repeat
-      background-position: center
-      background-size: 65% 65%
-      z-index: 3
-
 
 
   .extended-part-wrapper
@@ -80,76 +65,11 @@
     .container
       width: 100%
       position: relative
-      justify-content: center
-      nav.steps
-        width: 150px
-        margin: 100px auto 0
-        text-align: center
-        ul>li
-          list-style-type: none
-          display: inline-block
-          a
-            padding: 5px 15px
-            margin: 0 3px
-            border-bottom: 2px solid $grey
-            color: $grey
-            cursor: pointer
-            transition: color 0.3s ease-in-out
-            font-family: FuturaDemi
-            font-size: 15px
-            &:hover
-              border-color: $dark-grey
-              color: $dark-grey
-            &.active
-              border-color: $dark-grey
-              color: $dark-grey
-
-      .additional-info-block
-        position: absolute
+      .wrapper-router
+        display: flex
+        align-items: center
+        justify-content: center
         width: 100%
         height: 100%
-        opacity: 1
-        transition: 3s
-        display: block
-        top: 0
-        left: 0
-        z-index: -1
-        .circle-detail
-          position: absolute
-          width: 20%
-          height: 20%
-          background-color: #fff
-          border-radius: 50%
-          display: flex
-          align-items: center
-          justify-content: center
-          &.price
-            top: 0
-            left: 0
-            box-shadow: 2px 3px 30px 0px rgba(0, 0, 0, 0.1)
-            p
-              font-size: 45px
-              letter-spacing: -2px
-              span
-                font-family: Bebas
-                font-size: 17px
-                font-weight: bold
-                letter-spacing: 1px
-          &.delivery
-            bottom: 0
-            right: 0
-            box-shadow: -2px -3px 30px 0px rgba(0, 0, 0, 0.1)
-            p
-              padding-top: 10px
-              font-family: Bebas
-              font-size: 16px
-              letter-spacing: 0.5px
-              text-align: center
 
-@keyframes down-up
-  0%
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
-  50%
-    box-shadow: 0 19px 28px rgba(0,0,0,0.20), 0 15px 12px rgba(0,0,0,0.05)
-  100%
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+

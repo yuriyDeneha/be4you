@@ -2,6 +2,7 @@
   display: flex
   justify-content: space-between
   width: 100%
+  flex-wrap: wrap
   .data-item
     width: 30%
     label
@@ -26,7 +27,8 @@
         -moz-appearance: none
         appearance: none
         margin: 0
-      &#time::-webkit-datetime-edit-ampm-field
-        display: none
       &#time::-webkit-clear-button
         display: none
+    &.phone
+      width: 100%
+      margin-top: 20px

@@ -10,7 +10,7 @@ import {CatalogComponent} from './components/shop/catalog/catalog.component';
 import {FavouritesComponent} from './components/shop/favourites/favourites.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home/choose', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, children: [
     { path: 'choose', component: ChooseFlowersComponent },
     { path: 'fill', component: UserFormInfoComponent },

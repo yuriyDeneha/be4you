@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  orderState = true;
+  orderState = false;
 
   constructor() { }
 
@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   changeOrderState() {
     this.orderState = true;
+    // this.orderState = !this.orderState;
   }
 
 }

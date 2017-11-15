@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseFlowersComponent implements OnInit {
 
+  staticUrlToFile = 'assets/images/';
+  item = {
+    title: 'nice roses',
+    src: 'flowers.png',
+    price: 300
+  };
   constructor() { }
 
   ngOnInit() {

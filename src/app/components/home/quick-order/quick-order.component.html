@@ -1,34 +1,14 @@
 <div class="order-wrapper">
 
   <div class="white-bg-wrapper" wave-effect [size]="extended ? 1:2" [ngClass]="{'extended': extended}">
-    <div class="ggg"></div>
-    <div class="fhdsgdsg"></div>
   </div>
 
   <div class="extended-part-wrapper" [ngClass]="{'visible': extended}">
     <div class="container">
 
-      <div class="additional-info-block">
-        <div class="circle-detail price">
-          <p>{{item.price}}<span> UAH</span></p>
-        </div>
-        <div class="circle-detail delivery">
-          <p>Безкоштовна доставка</p>
-        </div>
+      <div class="wrapper-router">
+        <router-outlet></router-outlet>
       </div>
-
-
-      <nav class="steps">
-        <ul>
-          <li><a [routerLink]="['choose']" routerLinkActive="active" class="step step-1">1</a></li>
-          <li><a [routerLink]="['fill']" routerLinkActive="active" class="step step-2">2</a></li>
-        </ul>
-      </nav>
-
-
-
-
-      <router-outlet></router-outlet>
 
     </div>
   </div>
