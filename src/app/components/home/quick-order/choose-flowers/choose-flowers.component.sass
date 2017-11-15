@@ -1,5 +1,7 @@
-.flower-container
+@import '~app/common/commonStyle'
 
+.flower-container
+  text-align: center
   .flower-control
     display: flex
     justify-content: center
@@ -30,7 +32,6 @@
       justify-content: center
       position: relative
       overflow: hidden
-      &ho
       img
         width: 70%
         height: 70%
@@ -38,13 +39,28 @@
     text-align: center
     .title
       font-size: 18px
-      margin: 65px 0 20px
+      margin: 50px 0 20px
     .price
       font-family: Bebas
       font-size: 36px
       .zeros
         vertical-align: top
         font-size: 12px
+  .make-order
+    margin-top: 15px
+    padding: 10px 20px
+    border: 2px solid $grey
+    background-color: $grey
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: #fff
+    font-size: 14px
+    outline:none
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out
+    &:hover
+      background-color: $dark-grey
+      border-color: $dark-grey
+      cursor: pointer
 
 
 @keyframes left-right

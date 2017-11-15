@@ -12,11 +12,13 @@ import {FavouritesComponent} from './components/shop/favourites/favourites.compo
 const routes: Routes = [
   { path: '', redirectTo: '/home/choose', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, children: [
+    { path: '', redirectTo: 'choose', pathMatch: 'full' },
     { path: 'choose', component: ChooseFlowersComponent },
     { path: 'fill', component: UserFormInfoComponent },
   ]},
   { path: 'auth', component: AuthComponent },
   { path: 'shop', component: ShopComponent, children: [
+    { path: '', redirectTo: 'catalog', pathMatch: 'full' },
     { path: 'catalog', component: CatalogComponent },
     { path: 'favourites', component: FavouritesComponent },
   ]},
