@@ -54,9 +54,6 @@ export class ProductsService {
         previousSetNumber; // to avoid repeating in set
 
     for (let i = 0; i < this.products.length; i++) {
-
-
-      console.log(this.products.length - (i + 1));
       switch ( this.products.length - (i + 1) ) {
         case 1: {
           randomSetNumber = this.getRandomNumberOfSet(1, 2);

@@ -31,7 +31,8 @@ import { FavouritesComponent } from './components/shop/favourites/favourites.com
 import {ProductsService} from './services/products.service';
 import { ProductGridComponent } from './components/shop/product-grid/product-grid.component';
 import { ProductItemComponent } from './components/shop/product-grid/product-item/product-item.component';
-import { ProductFilterComponent } from './components/shop/product-filter/product-filter.component';
+import { ProductFilterComponent } from './components/shop/product-grid/product-filter/product-filter.component';
+import { ColorFilterComponent } from './common/color-filter/color-filter.component';
 
 
 
@@ -52,7 +53,8 @@ import { ProductFilterComponent } from './components/shop/product-filter/product
     FavouritesComponent,
     ProductGridComponent,
     ProductItemComponent,
-    ProductFilterComponent
+    ProductFilterComponent,
+    ColorFilterComponent
   ],
   imports: [
     BrowserModule,
