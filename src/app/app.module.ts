@@ -29,6 +29,8 @@ import { ChooseFlowersComponent } from './components/home/quick-order/choose-flo
 import { CatalogComponent } from './components/shop/catalog/catalog.component';
 import { FavouritesComponent } from './components/shop/favourites/favourites.component';
 import {ProductsService} from './services/products.service';
+import { ProductGridComponent } from './components/shop/product-grid/product-grid.component';
+import { ProductItemComponent } from './components/shop/product-grid/product-item/product-item.component';
 
 
 
@@ -46,7 +48,9 @@ import {ProductsService} from './services/products.service';
     UserFormInfoComponent,
     ChooseFlowersComponent,
     CatalogComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    ProductGridComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,

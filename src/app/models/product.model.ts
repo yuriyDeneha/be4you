@@ -3,5 +3,6 @@ export class Product {
   price: number;
   description: string;
   popularity: number;
-
+  size: number;
+  url: string;
 }

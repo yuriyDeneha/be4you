@@ -14,7 +14,7 @@ export class ShopComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
-    this.productsService.transformProductsArray();
+    this.productsService.defineSizeOnGrid();
   }
 
 }

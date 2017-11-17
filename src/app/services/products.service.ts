@@ -5,14 +5,38 @@ import {Product} from '../models/product.model';
 export class ProductsService {
 
   products: any[] = [
-    { popularity: 1 },
-    { popularity: 2 },
-    { popularity: 1 },
-    { popularity: 1 },
-    { popularity: 1 },
-    { popularity: 3 },
-    { popularity: 2 },
-    { popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 3 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 3 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 3 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 1 },
+    { url: 'assets/images/flowers.png', popularity: 3 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
+    { url: 'assets/images/flowers.png', popularity: 2 },
   ];
 
   productsTotal: number;
@@ -22,40 +46,67 @@ export class ProductsService {
     return this.products;
   }
 
-  transformProductsArray() {
+  defineSizeOnGrid() {
+    const BIG = 3,
+          NORMAL = 2,
+          SMALL = 1;
+    let randomSetNumber,
+        previousSetNumber; // to avoid repeating in set
 
-    let currentSum = 0;
-    for (let index = 0; index < this.productsTotal; index ++) {
-      switch (this.products[index]) {
-        case 3: {
-          if ( currentSum === 0 )
-            continue;
-          else{
-            let indexOfNeeded = this.findNeededElement(index, currentSum);
-          }
+    for (let i = 0; i < this.products.length; i++) {
 
-        }
-        case 2: {
-          continue;
-        }
+
+      console.log(this.products.length - (i + 1));
+      switch ( this.products.length - (i + 1) ) {
         case 1: {
-          continue;
+          randomSetNumber = this.getRandomNumberOfSet(1, 2);
+          break;
+        }
+        case 0: {
+          randomSetNumber = 0;
+          break;
+        }
+        default: {
+          do {
+            randomSetNumber = this.getRandomNumberOfSet();
+          } while (randomSetNumber === previousSetNumber);
+          break;
         }
       }
+
+      previousSetNumber = randomSetNumber;
+
+      switch (randomSetNumber) {
+        case 0: {
+          this.products[i]['size'] = BIG;
+          break;
+        }
+        case 1: {
+          this.products[i]['size'] = NORMAL;
+          this.products[++i]['size'] = SMALL;
+          break;
+        }
+        case 2: {
+          this.products[i]['size'] = SMALL;
+          this.products[++i]['size'] = NORMAL;
+          break;
+        }
+        case 3: {
+          this.products[i]['size'] = SMALL;
+          this.products[++i]['size'] = SMALL;
+          this.products[++i]['size'] = SMALL;
+          break;
+        }
+      }
+
     }
+    console.log(this.products);
   }
 
-  findNeededElement( fromPosition, value) {
-    let index = fromPosition;
-
-    while (this.products[++index].popularity !== value) {}
-
-
-    return index;
+  getRandomNumberOfSet(min= 0, max= 3) {
+    // 4 type of set is available : [ {3}, {2,1}, {1,2}, {1,1,1} ]
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  exchangeElements(index1, index2) {
-    let temp = this.products[index1];
-    this.products[index1] = this.products[index2];
-    this.products[index2] = temp;
-  }
+
+
 }
