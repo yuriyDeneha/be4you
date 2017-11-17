@@ -13,7 +13,6 @@ export class ProductGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.products);
   }
 
 }

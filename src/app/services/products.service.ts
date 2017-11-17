@@ -100,7 +100,6 @@ export class ProductsService {
       }
 
     }
-    console.log(this.products);
   }
 
   getRandomNumberOfSet(min= 0, max= 3) {
