@@ -33,6 +33,7 @@ import { ProductGridComponent } from './components/shop/product-grid/product-gri
 import { ProductItemComponent } from './components/shop/product-grid/product-item/product-item.component';
 import { ProductFilterComponent } from './components/shop/product-grid/product-filter/product-filter.component';
 import { ColorFilterComponent } from './common/color-filter/color-filter.component';
+import { SelectGridStructureComponent } from './components/shop/product-grid/select-grid-structure/select-grid-structure.component';
 
 
 
@@ -54,7 +55,8 @@ import { ColorFilterComponent } from './common/color-filter/color-filter.compone
     ProductGridComponent,
     ProductItemComponent,
     ProductFilterComponent,
-    ColorFilterComponent
+    ColorFilterComponent,
+    SelectGridStructureComponent
   ],
   imports: [
     BrowserModule,

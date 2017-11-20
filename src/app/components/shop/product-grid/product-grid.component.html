@@ -1,4 +1,8 @@
 <div class="product-grid-wrapper">
-  <product-item *ngFor="let product of products" [product]="product" class="product-item {{'size-' + product.size}}"></product-item>
+  <!--<product-item *ngFor="let product of products" [product]="product" class="product-item {{'size-' + product.size}}"></product-item>-->
+  <product-item *ngFor="let product of products" [product]="product" [gridStructureMode]="gridStructureMode"
+                class="{{getProductItemStyle(product)}}"
+  ></product-item>
+
 </div>
 
