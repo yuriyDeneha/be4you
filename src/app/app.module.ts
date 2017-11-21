@@ -34,6 +34,7 @@ import { ProductItemComponent } from './components/shop/product-grid/product-ite
 import { ProductFilterComponent } from './components/shop/product-grid/product-filter/product-filter.component';
 import { ColorFilterComponent } from './common/color-filter/color-filter.component';
 import { SelectGridStructureComponent } from './components/shop/product-grid/select-grid-structure/select-grid-structure.component';
+import { ColorPalleteComponent } from './components/shop/product-grid/color-pallete/color-pallete.component';
 
 
 
@@ -56,7 +57,8 @@ import { SelectGridStructureComponent } from './components/shop/product-grid/sel
     ProductItemComponent,
     ProductFilterComponent,
     ColorFilterComponent,
-    SelectGridStructureComponent
+    SelectGridStructureComponent,
+    ColorPalleteComponent
   ],
   imports: [
     BrowserModule,
