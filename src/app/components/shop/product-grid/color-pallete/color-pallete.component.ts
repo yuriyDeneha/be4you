@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'color-pallete',
@@ -8,8 +8,7 @@ import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 export class ColorPalleteComponent implements OnInit {
 
   @Input() selectedColors;
-
-  searchByColor = new EventEmitter();
+  @Output() searchByColor: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 

@@ -1,4 +1,30 @@
 
-
+$white: #fff
 $grey: #333
 $dark-grey: #1a1a1a
+
+
+=button-dark()
+  padding: 8px 18px
+  border: 1px solid $grey
+  background-color: $grey
+  text-transform: uppercase
+  letter-spacing: 1px
+  color: $white
+  font-size: 14px
+  outline: none
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out
+  font-family: FuturaBook
+  &:hover
+    background-color: $dark-grey
+    border-color: $dark-grey
+    cursor: pointer
+=button-dark-inverse()
+  background-color: $white
+  color: $grey
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out
+  &:hover
+    background-color: $dark-grey
+    border-color: $dark-grey
+    color: $white
+

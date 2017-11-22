@@ -46,21 +46,9 @@
       .zeros
         vertical-align: top
         font-size: 12px
-  .make-order
+  .button-dark
     margin-top: 15px
-    padding: 10px 20px
-    border: 2px solid $grey
-    background-color: $grey
-    text-transform: uppercase
-    letter-spacing: 1px
-    color: #fff
-    font-size: 14px
-    outline:none
-    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out
-    &:hover
-      background-color: $dark-grey
-      border-color: $dark-grey
-      cursor: pointer
+    +button-dark()
 
 
 @keyframes left-right

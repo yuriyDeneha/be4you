@@ -19,8 +19,9 @@ export class ShopComponent implements OnInit {
     this.productsService.defineSizeOnGrid();
   }
 
-  searchByColor(){
-
+  searchByColor() {
+    console.log('searchByColor', this.selectedColors);
+    this.productsService.getProducts();
   }
 
 }
