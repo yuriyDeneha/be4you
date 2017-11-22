@@ -10,11 +10,17 @@ import {Product} from '../../models/product.model';
 export class ShopComponent implements OnInit {
 
   products: Product[] = [];
+  selectedColors: object[] = [];
+
   constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
     this.products = this.productsService.getProducts();
     this.productsService.defineSizeOnGrid();
+  }
+
+  searchByColor(){
+
   }
 
 }
