@@ -38,6 +38,13 @@ export class ProductsService {
     { url: 'assets/images/flowers.png', popularity: 2, title: 'beautiful rose', price: 399 },
     { url: 'assets/images/flowers.png', popularity: 2, title: 'beautiful rose', price: 399 },
   ];
+  favoritesProducts: any[] = [
+    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
+    { url: 'assets/images/flowers.png', popularity: 2, title: 'beautiful rose', price: 399 },
+    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
+    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
+    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
+    ];
 
   productsTotal: number;
   constructor() { }
@@ -45,6 +52,11 @@ export class ProductsService {
   getProducts() {
     console.log();
     return this.products;
+  }
+
+  getFavoritesProducts() {
+    console.log();
+    return this.favoritesProducts;
   }
 
   defineSizeOnGrid() {

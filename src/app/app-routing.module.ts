@@ -7,7 +7,6 @@ import {AuthComponent} from './components/auth/auth.component';
 import {UserFormInfoComponent} from './components/home/quick-order/user-form-info/user-form-info.component';
 import {ChooseFlowersComponent} from './components/home/quick-order/choose-flowers/choose-flowers.component';
 import {CatalogComponent} from './components/shop/catalog/catalog.component';
-import {FavouritesComponent} from './components/shop/favourites/favourites.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home/choose', pathMatch: 'full' },
@@ -20,7 +19,6 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent, children: [
     { path: '', redirectTo: 'catalog', pathMatch: 'full' },
     { path: 'catalog', component: CatalogComponent },
-    { path: 'favourites', component: FavouritesComponent },
   ]},
 ];
 

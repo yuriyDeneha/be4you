@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 
 //Material design modules
-import {MatButtonModule, MatInputModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatTooltipModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,14 +27,14 @@ import { DataInputComponent } from './common/data-input/data-input.component';
 import { UserFormInfoComponent } from './components/home/quick-order/user-form-info/user-form-info.component';
 import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
 import { CatalogComponent } from './components/shop/catalog/catalog.component';
-import { FavouritesComponent } from './components/shop/favourites/favourites.component';
 import {ProductsService} from './services/products.service';
 import { ProductGridComponent } from './components/shop/product-grid/product-grid.component';
 import { ProductItemComponent } from './components/shop/product-grid/product-item/product-item.component';
 import { ProductFilterComponent } from './components/shop/product-grid/product-filter/product-filter.component';
-import { ColorFilterComponent } from './common/color-filter/color-filter.component';
 import { SelectGridStructureComponent } from './components/shop/product-grid/select-grid-structure/select-grid-structure.component';
 import { ColorPalleteComponent } from './components/shop/product-grid/color-pallete/color-pallete.component';
+import { FavoritesComponent } from './components/shop/favorites/favorites.component';
+import { FavoriteItemComponent } from './components/shop/favorites/favorite-item/favorite-item.component';
 
 
 
@@ -52,13 +52,13 @@ import { ColorPalleteComponent } from './components/shop/product-grid/color-pall
     UserFormInfoComponent,
     ChooseFlowersComponent,
     CatalogComponent,
-    FavouritesComponent,
     ProductGridComponent,
     ProductItemComponent,
     ProductFilterComponent,
-    ColorFilterComponent,
     SelectGridStructureComponent,
-    ColorPalleteComponent
+    ColorPalleteComponent,
+    FavoritesComponent,
+    FavoriteItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +74,7 @@ import { ColorPalleteComponent } from './components/shop/product-grid/color-pall
     // material elements
     MatButtonModule,
     MatInputModule,
+    MatTooltipModule,
   ],
   providers: [ ProductsService],
   bootstrap: [AppComponent]

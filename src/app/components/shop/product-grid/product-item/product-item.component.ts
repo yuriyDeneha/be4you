@@ -12,7 +12,10 @@ export class ProductItemComponent implements OnInit {
   @Input() gridStructureMode: GridStructureMode;
 
   styleType: string;
-
+  toolTipPosition = 'right';
+  public message: object = {
+    freeDelivery: 'delivey is free, delivey is free, delivey is free, delivey is free, delivey is free, delivey is free,'
+  };
   constructor() { }
 
   ngOnInit() {

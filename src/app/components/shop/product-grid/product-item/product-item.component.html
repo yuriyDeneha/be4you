@@ -3,7 +3,10 @@
   <img src="{{product.url}}" alt="flowers">
   <div class="info-wrapper">
     <p class="title">&mdash;&nbsp;{{product.title}}&nbsp;&mdash;</p>
-    <p class="price">{{product.price}}<span class="zeros">00</span></p>
+    <p class="price" matTooltip="+ 0 грн за достаку!" [matTooltipPosition]="toolTipPosition">
+      {{product.price}}
+      <span class="zeros">00</span>
+    </p>
   </div>
 
   <button [routerLink]="['../products/:product.id']"  class="button-dark button-dark-inverse">Купити</button>
