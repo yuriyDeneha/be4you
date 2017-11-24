@@ -11,6 +11,9 @@ export class ShopComponent implements OnInit {
 
   products: Product[] = [];
   selectedColors: object[] = [];
+  favorites = {
+    open: true
+  };
 
   constructor(private productsService: ProductsService) { }
 
@@ -24,4 +27,7 @@ export class ShopComponent implements OnInit {
     this.productsService.getProducts();
   }
 
+  toggleFavoriteState() {
+    this.favorites.open = !this.favorites.open;
+  }
 }

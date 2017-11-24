@@ -1,5 +1,6 @@
 <div class="shop-wrapper">
-  <aside>
+  <aside [ngClass]="{'open': favorites.open}"
+          (click)="toggleFavoriteState()">
     <favorites></favorites>
   </aside>
   <h3><a [routerLink]="['../home']">Повернутись на головну</a></h3>

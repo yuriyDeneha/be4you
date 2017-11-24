@@ -25,4 +25,19 @@
       top: -5px
   product-grid
     width: 80%
+  aside
+    position: fixed
+    left: 0px
+    top: 0px
+    height: 100%
+    background-color: $grey
+    width: 60px
+    transition: width 0.5s ease-in-out
+    z-index: 5
+
+
+    +small-shadow()
+    &.open
+      width: 20%
+      background-color: $white
 
