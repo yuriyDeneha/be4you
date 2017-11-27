@@ -40,9 +40,6 @@ export class ProductsService {
   ];
   favoritesProducts: any[] = [
     { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
-    { url: 'assets/images/flowers.png', popularity: 2, title: 'beautiful rose', price: 399 },
-    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
-    { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
     { url: 'assets/images/flowers.png', popularity: 1, title: 'beautiful rose', price: 399 },
     ];
 
@@ -57,6 +54,10 @@ export class ProductsService {
   getFavoritesProducts() {
     console.log();
     return this.favoritesProducts;
+  }
+
+  addToFavoritesProducts(product) {
+    this.favoritesProducts.push(product);
   }
 
   defineSizeOnGrid() {

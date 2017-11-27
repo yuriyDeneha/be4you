@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../../../models/product.model';
 import {GridStructureMode} from '../../../../models/product-grid-structure.type';
+import {ProductsService} from '../../../../services/products.service';
 
 @Component({
   selector: 'product-item',
@@ -16,7 +17,7 @@ export class ProductItemComponent implements OnInit {
   public message: object = {
     freeDelivery: 'delivey is free, delivey is free, delivey is free, delivey is free, delivey is free, delivey is free,'
   };
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
     this.styleType = this.configureStyleForProduct();
@@ -57,6 +58,10 @@ export class ProductItemComponent implements OnInit {
 
   getRandomNumberOfSet(min= 0, max= 3) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  addToFavoritesProducts(product) {
+    this.productsService.addToFavoritesProducts(product);
   }
 }
 

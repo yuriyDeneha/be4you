@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FavoriteItemComponent implements OnInit {
   @Input() favorite;
+  @Input() openMode;
   constructor() { }
 
   ngOnInit() {

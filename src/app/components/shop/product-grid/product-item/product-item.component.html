@@ -9,5 +9,9 @@
     </p>
   </div>
 
-  <button [routerLink]="['../products/:product.id']"  class="button-dark button-dark-inverse">Купити</button>
+    <!--[routerLink]="['../products/:product.id']"-->
+  <button
+          class="button-dark button-dark-inverse"
+          (click)="addToFavoritesProducts(product)"
+  >Купити</button>
 </div>
