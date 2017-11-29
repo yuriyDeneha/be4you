@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import {CommonModule} from "@angular/common";
+import {CommonModule} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {environment} from '../environments/environment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -47,7 +47,7 @@ import { ChooseFlowersComponent } from './components/home/quick-order/choose-flo
     CommonModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
