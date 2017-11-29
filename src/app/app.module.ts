@@ -1,6 +1,7 @@
+import { NgModule } from '@angular/core';
+import {CommonModule} from "@angular/common";
 import { BrowserModule } from '@angular/platform-browser';
 import {environment} from '../environments/environment';
-import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpModule} from '@angular/http';
@@ -15,27 +16,18 @@ import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 //Material design modules
 import {MatButtonModule, MatInputModule, MatTooltipModule} from '@angular/material';
 
+import {ProductsService} from './services/products.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { ContentComponent } from './components/content/content.component';
-import { ShopComponent } from './components/shop/shop.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
 import { WaveEffectComponent } from './common/wave-effect/wave-effect.component';
 import { DataInputComponent } from './common/data-input/data-input.component';
 import { UserFormInfoComponent } from './components/home/quick-order/user-form-info/user-form-info.component';
 import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
-import { CatalogComponent } from './components/shop/catalog/catalog.component';
-import {ProductsService} from './services/products.service';
-import { ProductGridComponent } from './components/shop/product-grid/product-grid.component';
-import { ProductItemComponent } from './components/shop/product-grid/product-item/product-item.component';
-import { ProductFilterComponent } from './components/shop/product-grid/product-filter/product-filter.component';
-import { SelectGridStructureComponent } from './components/shop/product-grid/select-grid-structure/select-grid-structure.component';
-import { ColorPalleteComponent } from './components/shop/product-grid/color-pallete/color-pallete.component';
-import { FavoritesComponent } from './components/shop/favorites/favorites.component';
-import { FavoriteItemComponent } from './components/shop/favorites/favorite-item/favorite-item.component';
-
 
 
 @NgModule({
@@ -44,23 +36,15 @@ import { FavoriteItemComponent } from './components/shop/favorites/favorite-item
     HomeComponent,
     TopBarComponent,
     ContentComponent,
-    ShopComponent,
     AuthComponent,
     QuickOrderComponent,
     WaveEffectComponent,
     DataInputComponent,
     UserFormInfoComponent,
     ChooseFlowersComponent,
-    CatalogComponent,
-    ProductGridComponent,
-    ProductItemComponent,
-    ProductFilterComponent,
-    SelectGridStructureComponent,
-    ColorPalleteComponent,
-    FavoritesComponent,
-    FavoriteItemComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule,
@@ -74,7 +58,6 @@ import { FavoriteItemComponent } from './components/shop/favorites/favorite-item
     // material elements
     MatButtonModule,
     MatInputModule,
-    MatTooltipModule,
   ],
   providers: [ ProductsService],
   bootstrap: [AppComponent]
