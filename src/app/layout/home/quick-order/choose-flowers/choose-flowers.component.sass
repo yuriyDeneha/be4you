@@ -1,0 +1,60 @@
+@import '~app/common/commonStyle'
+
+.flower-container
+  text-align: center
+  .flower-control
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 50px
+    .arrow
+      width: 15px
+      height: 15px
+      margin: 0 80px
+      transition: transform 0.3s
+      cursor: pointer
+      &:nth-child(1)
+        transform: rotate(90deg)
+        &:hover
+          transform: scale(1.2)
+      &:nth-child(3)
+        transform: rotate(-90deg)
+        &:hover
+          transform: scale(1.2)
+    .image-wrapper
+      width: 220px
+      height: 220px
+      border-radius: 50%
+      transition: width 1s 1s, height 1s 1s, box-shadow 1s
+      animation: left-right 4000ms 2s infinite
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      overflow: hidden
+      img
+        width: 70%
+        height: 70%
+  .info-wrapper
+    text-align: center
+    .title
+      font-size: 18px
+      margin: 50px 0 20px
+    .price
+      font-family: Bebas
+      font-size: 36px
+      .zeros
+        vertical-align: top
+        font-size: 12px
+  .button-dark
+    margin-top: 15px
+    +button-dark()
+
+
+@keyframes left-right
+  0%
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.16), 2px 2px 4px rgba(0,0,0,0.23)
+  50%
+    box-shadow: -5px 0px 2px rgba(0,0,0,0.16), -5px 0px 2px rgba(0,0,0,0.13)
+  100%
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.16), 2px 2px 4px rgba(0,0,0,0.23)

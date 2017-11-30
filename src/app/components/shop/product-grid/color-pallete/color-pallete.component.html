@@ -1,7 +1,0 @@
-<div class="color-wrapper">
-  <span class="color-circle" *ngFor="let color of colors"
-        [ngClass]="{'selected': selectedColors.includes(color.id)}"
-        [ngStyle]="{'background-color': color.name, 'top': 30*selectedColors.indexOf(color.id) + 'px', 'z-index': selectedColors.indexOf(color.id)}"
-        (click)="selectColor(color)">
-  </span>
-</div>

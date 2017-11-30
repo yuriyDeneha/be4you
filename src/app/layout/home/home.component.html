@@ -1,0 +1,11 @@
+<top-bar></top-bar>
+<div class="container" [ngClass]="{'extended':orderState}">
+  <div class="center-horz-vert">
+    <h1>Доставимо квіти безкоштовно</h1>
+  </div>
+  <div class="company-label">
+    <h4>BE<span>4</span>you<span>.lviv</span></h4>
+    <h3><span>flowers</span>company</h3>
+  </div>
+  <quick-order [extended]="orderState" (click)="changeOrderState()"></quick-order>
+</div>

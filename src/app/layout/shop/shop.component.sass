@@ -1,0 +1,43 @@
+@import '~app/common/commonStyle'
+
+.shop-wrapper
+  width: 80%
+  margin: 0 auto
+  height: auto
+  h3>a
+    font-family: FuturaBook
+    border-bottom: 1px solid transparent
+    transition: border-color 0.3s
+    display: inline-block
+    cursor: pointer
+    margin: 40px 10px 20px
+    position: relative
+    color: $grey
+    &:hover
+      border-color: $grey
+    &:before
+      content: '➟'
+      display: inline-block
+      padding-top: 5px
+      transform: rotate(-145deg)
+      position: absolute
+      left: -20px
+      top: -5px
+  product-grid
+    width: 80%
+  aside
+    position: fixed
+    left: 0px
+    top: 0px
+    height: 100%
+    background-color: $grey
+    width: 60px
+    transition: width 0.5s ease-in-out
+    z-index: 5
+
+
+    +small-shadow()
+    &.open
+      width: 20%
+      background-color: $white
+

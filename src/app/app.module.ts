@@ -16,18 +16,18 @@ import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 //Material design modules
 import {MatButtonModule, MatInputModule, MatTooltipModule} from '@angular/material';
 
-import {ProductsService} from './services/products.service';
+import {ProductsService} from './shared/products.service';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { ContentComponent } from './components/content/content.component';
-import { AuthComponent } from './components/auth/auth.component';
-import { QuickOrderComponent } from './components/home/quick-order/quick-order.component';
+import { HomeComponent } from './layout/home/home.component';
+import { TopBarComponent } from './layout/top-bar/top-bar.component';
+import { ContentComponent } from './layout/content/content.component';
+import { AuthComponent } from './auth/auth.component';
+import { QuickOrderComponent } from './layout/home/quick-order/quick-order.component';
 import { WaveEffectComponent } from './common/wave-effect/wave-effect.component';
 import { DataInputComponent } from './common/data-input/data-input.component';
-import { UserFormInfoComponent } from './components/home/quick-order/user-form-info/user-form-info.component';
-import { ChooseFlowersComponent } from './components/home/quick-order/choose-flowers/choose-flowers.component';
+import { UserFormInfoComponent } from './layout/home/quick-order/user-form-info/user-form-info.component';
+import { ChooseFlowersComponent } from './layout/home/quick-order/choose-flowers/choose-flowers.component';
 
 
 @NgModule({
@@ -51,6 +51,7 @@ import { ChooseFlowersComponent } from './components/home/quick-order/choose-flo
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

@@ -1,0 +1,45 @@
+@import '~app/common/commonStyle'
+
+.product-wrapper
+  padding: 15px
+  border-radius: 50%
+  width: 100%
+  text-align: center
+  img
+    width: 95%
+  &.center
+    left: 50%
+    transform: translateX(-50%)
+  &.top
+    top: 0%
+    transform: translateY(-50%)
+  &.bottom
+    bottom: 0%
+    transform: translateY(50%)
+  &.right
+    right: 0%
+    transform: translateX(50%)
+  &.left
+    left: 0%
+    transform: translateX(-50%)
+
+  .button-dark
+    margin-top: 20px
+    +button-dark()
+
+  .button-dark-inverse
+    +button-dark-inverse()
+
+  .info-wrapper
+    text-align: center
+    .title
+      font-size: 18px
+      margin: 50px 0 20px
+    .price
+      display: inline-block
+      font-family: Bebas
+      font-size: 36px
+      .zeros
+        vertical-align: top
+        font-size: 12px
+

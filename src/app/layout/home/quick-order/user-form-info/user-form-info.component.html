@@ -1,0 +1,5 @@
+  <form class="order-data">
+    <label for="location">Куди доставити ?</label>
+    <ng4geo-autocomplete id="location" [userSettings]="autoCompleteSettings" (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
+    <data-input></data-input>
+  </form>

@@ -20,9 +20,9 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_shop_shop_component__ = __webpack_require__("../../../../../src/app/components/shop/shop.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_auth_auth_component__ = __webpack_require__("../../../../../src/app/components/auth/auth.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_home_home_component__ = __webpack_require__("../../../../../src/app/layout/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_shop_shop_component__ = __webpack_require__("../../../../../src/app/layout/shop/shop.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_auth_auth_component__ = __webpack_require__("../../../../../src/app/layout/auth/auth.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,13 +127,13 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng4_geoautocomplete__ = __webpack_require__("../../../../ng4-geoautocomplete/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/components/top-bar/top-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_content_content_component__ = __webpack_require__("../../../../../src/app/components/content/content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_shop_shop_component__ = __webpack_require__("../../../../../src/app/components/shop/shop.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_auth_auth_component__ = __webpack_require__("../../../../../src/app/components/auth/auth.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_home_quick_order_quick_order_component__ = __webpack_require__("../../../../../src/app/components/home/quick-order/quick-order.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_common_wave_effect_wave_effect_component__ = __webpack_require__("../../../../../src/app/components/common/wave-effect/wave-effect.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__("../../../../../src/app/layout/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_top_bar_top_bar_component__ = __webpack_require__("../../../../../src/app/layout/top-bar/top-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_content_content_component__ = __webpack_require__("../../../../../src/app/layout/content/content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_shop_shop_component__ = __webpack_require__("../../../../../src/app/layout/shop/shop.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_auth_auth_component__ = __webpack_require__("../../../../../src/app/layout/auth/auth.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_home_quick_order_quick_order_component__ = __webpack_require__("../../../../../src/app/layout/home/quick-order/quick-order.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_common_wave_effect_wave_effect_component__ = __webpack_require__("../../../../../src/app/layout/common/wave-effect/wave-effect.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -245,8 +245,8 @@ var AuthComponent = (function () {
 AuthComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-auth',
-        template: __webpack_require__("../../../../../src/app/components/auth/auth.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/auth/auth.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/auth/auth.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/auth/auth.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], AuthComponent);
@@ -310,8 +310,8 @@ __decorate([
 WaveEffectComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: '[wave-effect]',
-        template: __webpack_require__("../../../../../src/app/components/common/wave-effect/wave-effect.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/common/wave-effect/wave-effect.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/common/wave-effect/wave-effect.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/common/wave-effect/wave-effect.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], WaveEffectComponent);
@@ -390,8 +390,8 @@ var ContentComponent = (function () {
 ContentComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'content',
-        template: __webpack_require__("../../../../../src/app/components/content/content.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/content/content.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/content/content.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/content/content.component.sass")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2__["a" /* AngularFireModule */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2__["a" /* AngularFireModule */]) === "function" && _c || Object])
 ], ContentComponent);
@@ -456,8 +456,8 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'home',
-        template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/home/home.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/home/home.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/home/home.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], HomeComponent);
@@ -529,8 +529,8 @@ __decorate([
 QuickOrderComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'quick-order',
-        template: __webpack_require__("../../../../../src/app/components/home/quick-order/quick-order.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/home/quick-order/quick-order.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/home/quick-order/quick-order.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/home/quick-order/quick-order.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], QuickOrderComponent);
@@ -590,8 +590,8 @@ var ShopComponent = (function () {
 ShopComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-shop',
-        template: __webpack_require__("../../../../../src/app/components/shop/shop.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/shop/shop.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/shop/shop.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/shop/shop.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], ShopComponent);
@@ -651,8 +651,8 @@ var TopBarComponent = (function () {
 TopBarComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'top-bar',
-        template: __webpack_require__("../../../../../src/app/components/top-bar/top-bar.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/top-bar/top-bar.component.sass")]
+        template: __webpack_require__("../../../../../src/app/layout/top-bar/top-bar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/layout/top-bar/top-bar.component.sass")]
     }),
     __metadata("design:paramtypes", [])
 ], TopBarComponent);
