@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../../../shared/models/product.model';
 import {ProductsService} from '../../../shared/products.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'favorites',
@@ -10,11 +11,12 @@ import {ProductsService} from '../../../shared/products.service';
 export class FavoritesComponent implements OnInit {
 
 
-  favoritesItems: Product[] = [];
-  constructor(private productsService: ProductsService) { }
+  favoritesItems$: Observable<Product[]>;
 
-  ngOnInit() {
-    this.favoritesItems = this.productsService.getFavoritesProducts();
+  constructor(private productsService: ProductsService) {
   }
 
+  ngOnInit() {
+    this.favoritesItems$ = this.productsService.getFavoritesProducts();
+  }
 }

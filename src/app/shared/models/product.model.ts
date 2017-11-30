@@ -1,8 +1,8 @@
 export class Product {
   title: string;
   price: number;
-  description: string;
+  // description: string;
   popularity: number;
-  size: number;
+  // size: number;
   url: string;
 }

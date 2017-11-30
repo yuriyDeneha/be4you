@@ -3,8 +3,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 
-import { AngularFireModule } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
+import {Product} from '../../shared/models/product.model';
 
 @Component({
   selector: 'content',
@@ -12,10 +12,12 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./content.component.sass']
 })
 export class ContentComponent implements OnInit {
-  flowers$: Observable<any[]>;
+  flowers$: Observable<Product[]>;
   userId: string;
+  products = [];
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth, private firebase: AngularFireModule) {
+  constructor(private db: AngularFireDatabase,
+              private afAuth: AngularFireAuth) {
   }
 
   ngOnInit() {
@@ -25,10 +27,10 @@ export class ContentComponent implements OnInit {
       }
     });
     this.flowers$ = this.getFlowers('/flowers');
-
   }
 
-  getFlowers(listPath): Observable<any[]> {
+
+  getFlowers(listPath): Observable<any> {
     return this.db.list(listPath).valueChanges();
   }
 

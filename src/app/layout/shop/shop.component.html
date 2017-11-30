@@ -5,6 +5,6 @@
   </aside>
   <h3><a [routerLink]="['../home']">Повернутись на головну</a></h3>
   <product-filter></product-filter>
-  <product-grid [products]="products"></product-grid>
+  <product-grid [products$]="products$"></product-grid>
   <color-pallete [selectedColors]="selectedColors" (searchByColor) = "searchByColor()"></color-pallete>
 </div>

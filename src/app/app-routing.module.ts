@@ -5,6 +5,7 @@ import {HomeComponent} from './layout/home/home.component';
 import {AuthComponent} from './auth/auth.component';
 import {UserFormInfoComponent} from './layout/home/quick-order/user-form-info/user-form-info.component';
 import {ChooseFlowersComponent} from './layout/home/quick-order/choose-flowers/choose-flowers.component';
+import {ContentComponent} from './layout/content/content.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'fill', component: UserFormInfoComponent },
   ]},
   { path: 'auth', component: AuthComponent },
+  { path: 'content', component: ContentComponent },
 
 ];
 

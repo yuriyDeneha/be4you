@@ -17,7 +17,7 @@ export class InterceptorService implements HttpInterceptor {
     if (request.url.indexOf('token') === -1) {
       request = request.clone({
         setHeaders: {
-          Authorization: `Bearer ${tokenService.AccessToken}`
+          // Authorization: `Bearer ${tokenService.AccessToken}`
         }
       });
     }

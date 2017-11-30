@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductsService} from '../../shared/products.service';
 import {Product} from '../../shared/models/product.model';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-shop',
@@ -9,7 +10,7 @@ import {Product} from '../../shared/models/product.model';
 })
 export class ShopComponent implements OnInit {
 
-  products: Product[] = [];
+  products$: Observable<Product[]>;
   selectedColors: object[] = [];
   favorites = {
     open: true
@@ -18,13 +19,11 @@ export class ShopComponent implements OnInit {
   constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
-    this.products = this.productsService.getProducts();
-    this.productsService.defineSizeOnGrid();
+    this.products$ = this.productsService.getProducts();
   }
 
   searchByColor() {
     console.log('searchByColor', this.selectedColors);
-    this.productsService.getProducts();
   }
 
   toggleFavoriteState() {

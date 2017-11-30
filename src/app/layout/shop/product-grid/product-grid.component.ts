@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../../shared/models/product.model';
 import {GridStructureMode} from '../../../shared/models/product-grid-structure.type';
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'product-grid',
@@ -9,9 +10,8 @@ import {GridStructureMode} from '../../../shared/models/product-grid-structure.t
 })
 export class ProductGridComponent implements OnInit {
 
-  @Input() products: Product[];
+  @Input() products$: Observable<Product[]>;
 
-  //initialization
   gridStructureMode: GridStructureMode = GridStructureMode.SameColumn;
 
   constructor() { }

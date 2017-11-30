@@ -1,7 +1,8 @@
 <ul>
   <li *ngFor="let item of flowers$ | async">
-    <h4>{{item.name}}</h4>
+    <h4>{{item.title}}</h4>
     <span>{{item.type}}</span>
     <p>{{item.description}}</p>
+    <img src="item.url" alt="">
   </li>
 </ul>
