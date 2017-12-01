@@ -5,4 +5,5 @@ export class Product {
   popularity: number;
   // size: number;
   url: string;
+  $key: string;
 }

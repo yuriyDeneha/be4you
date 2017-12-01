@@ -6,7 +6,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -48,6 +47,7 @@ import { ChooseFlowersComponent } from './layout/home/quick-order/choose-flowers
     BrowserModule,
     FormsModule,
     HttpClientModule,
+
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,

@@ -14,12 +14,13 @@ import {ShopComponent} from './shop.component';
 
 import {MatTooltipModule} from '@angular/material';
 import {ColorPalleteComponent} from './product-grid/color-pallete/color-pallete.component';
+import {AngularFirestoreModule} from "angularfire2/firestore";
 
 @NgModule({
   imports: [
     CommonModule,
     MatTooltipModule,
-    ShopRoutingModule
+    ShopRoutingModule,
   ],
   declarations: [
     ShopComponent,

@@ -27,6 +27,6 @@ export class ShopComponent implements OnInit {
   }
 
   toggleFavoriteState() {
-    this.favorites.open = !this.favorites.open;
+    // this.favorites.open = !this.favorites.open;
   }
 }

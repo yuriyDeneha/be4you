@@ -11,12 +11,19 @@ import {Observable} from 'rxjs/Observable';
 export class FavoritesComponent implements OnInit {
 
 
-  favoritesItems$: Observable<Product[]>;
+  favorites: Product[];
 
   constructor(private productsService: ProductsService) {
   }
 
   ngOnInit() {
-    this.favoritesItems$ = this.productsService.getFavoritesProducts();
+    this.productsService.fetchFavorites()
+      .subscribe(items =>
+        this.favorites = this.productsService.addIdsToItems(items)
+      );
+  }
+
+  removeItemFromFavorites($key) {
+    this.productsService.removeFromFavorites($key);
   }
 }

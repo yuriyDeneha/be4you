@@ -1,5 +1,8 @@
 <div class="favorites-wrapper">
   <div class="favorites-list">
-    <favorite-item *ngFor="let item of favoritesItems$ | async" [favorite]="item" [openMode]="open"></favorite-item>
+    <favorite-item *ngFor="let item of favorites"
+                   [favorite]="item" [openMode]="open"
+                   (remove)="removeItemFromFavorites(item.$key)"
+    ></favorite-item>
   </div>
 </div>

@@ -61,7 +61,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   addToFavoritesProducts(product) {
-    this.productsService.addToFavoritesProducts(product);
+    this.productsService.addToFavorites(product);
   }
 }
 

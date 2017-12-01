@@ -1,3 +1,4 @@
-<div class="favorite-item-wrapper" ngClass="{'open': openMode}">
+<div class="favorite-item" ngClass="{'open': openMode}">
   <img src="{{favorite.url}}" alt="flowers">
+  <p class="favorite-item__refuse"><a (click)="removeFromFavorites()">- не подобається</a></p>
 </div>
