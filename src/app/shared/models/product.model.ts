@@ -1,9 +1,11 @@
 export class Product {
+  $key: string;
   title: string;
   price: number;
-  // description: string;
   popularity: number;
-  // size: number;
   url: string;
-  $key: string;
+  color: number;
+
+  // description: string;
+  // size: number;
 }

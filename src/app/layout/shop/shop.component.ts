@@ -10,8 +10,8 @@ import {Observable} from 'rxjs/Observable';
 })
 export class ShopComponent implements OnInit {
 
-  products$: Observable<Product[]>;
-  selectedColors: object[] = [];
+  products: Product[] = [];
+  selectedColors: number[] = [];
   favorites = {
     open: true
   };
@@ -19,11 +19,19 @@ export class ShopComponent implements OnInit {
   constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
-    this.products$ = this.productsService.getProducts();
+    // this.productsService.seedFireDatabase();
+
+    this.productsService.getProducts()
+      .subscribe(items => {
+
+          this.products = this.productsService.addIdsToItems(items);
+          console.log(this.products);
+        }
+      );
   }
 
   searchByColor() {
-    console.log('searchByColor', this.selectedColors);
+    this.productsService.selectedColors$.next(this.selectedColors[0]);
   }
 
   toggleFavoriteState() {

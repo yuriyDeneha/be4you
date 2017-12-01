@@ -1,57 +1,74 @@
 import { Injectable } from '@angular/core';
-import {AngularFireDatabase} from 'angularfire2/database';
-import {Observable} from 'rxjs/Observable';
-
+import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 
 import 'rxjs/add/operator/map';
 
 import {Product} from './models/product.model';
-import {FirebaseListObservable} from "angularfire2/database-deprecated";
-import {element} from "protractor";
+import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class ProductsService {
 
-  flowersPath = '/flowers';
+  productsPath = '/flowers';
   favoritesPath = '/favorites';
 
-  // favorites: Product[];
-  favorites: any;
-  products: Product[];
+  selectedColors$ = new Subject<number>();
+
+  favoritesRef: AngularFireList<Product> = this.db.list<Product>(this.favoritesPath);
+
+  productsRef: AngularFireList<Product>  = this.db.list<Product>(this.productsPath);
+
 
   constructor(private db: AngularFireDatabase) { }
 
-  fetchFavorites() {
-    return this.db.list(this.favoritesPath).snapshotChanges();
-  }
-
-  addIdsToItems(data) {
-    return data.map(element => {
-      return {
-        ... element.payload.toJSON(),
-        $key: element.key
-      }});
-  }
-
-  getProducts(): FirebaseListObservable<Product[]> {
-    return this.db.list(this.flowersPath).valueChanges();
+  getProducts() {
+    return this.selectedColors$.switchMap(color =>
+      this.db.list(this.productsPath, ref => this.checkByQuery(ref, color)
+      ).snapshotChanges()
+    );
   }
 
   addToProducts(product) {
-    return this.db.list(this.flowersPath).push(product);
+    return this.productsRef.push(product);
   }
 
-  getFavorites(): FirebaseListObservable<Product[]> {
-    return this.db.list(this.favoritesPath).valueChanges();
+  getFavorites() {
+    return this.favoritesRef.snapshotChanges(['child_added', 'child_removed']);
   }
 
   addToFavorites(product) {
-    return this.db.list(this.favoritesPath).push(product);
+    delete product.$key;
+    return this.favoritesRef.push(product);
   }
 
   removeFromFavorites($key) {
-    return this.db.list(`${this.favoritesPath}/`).remove($key);
+    return this.favoritesRef.remove($key);
   }
 
+  addIdsToItems(data): Product[] {
+    return data.map(elements => {
+      return {
+        $key: elements.key,
+        ... elements.payload.val()
+      };
+    });
+  }
+
+  checkByQuery(ref, color) {
+    console.log(color);
+    return color > -1 ? ref.orderByChild('color').equalTo(color) : ref;
+  }
+
+  seedFireDatabase() {
+    this.favoritesRef.snapshotChanges().subscribe(items => {
+      this.addIdsToItems(items).forEach( item => {
+        console.log('int');
+        delete item.$key;
+        item['color'] = 1;
+        this.productsRef.push({...item})
+          .then ( result => console.log(result));
+      });
+    });
+  }
 
 }

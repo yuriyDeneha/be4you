@@ -10,7 +10,7 @@ import {Observable} from "rxjs/Observable";
 })
 export class ProductGridComponent implements OnInit {
 
-  @Input() products$: Observable<Product[]>;
+  @Input() products: Product[];
 
   gridStructureMode: GridStructureMode = GridStructureMode.SameColumn;
 

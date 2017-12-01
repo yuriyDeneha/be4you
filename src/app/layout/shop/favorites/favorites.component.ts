@@ -17,7 +17,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.productsService.fetchFavorites()
+    this.productsService.getFavorites()
       .subscribe(items =>
         this.favorites = this.productsService.addIdsToItems(items)
       );
