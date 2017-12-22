@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from '../../../../shared/models/product.model';
-import {GridStructureMode} from '../../../../shared/models/product-grid-structure.type';
-import {ProductsService} from '../../../../shared/products.service';
+import {Product} from '../../../models/product.model';
+import {GridStructureMode} from '../../../../../shared/models/product-grid-structure.type';
+import {ProductsService} from '../../../services/products.service';
 
 @Component({
   selector: 'product-item',

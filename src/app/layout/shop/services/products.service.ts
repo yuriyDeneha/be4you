@@ -3,7 +3,7 @@ import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 
 import 'rxjs/add/operator/map';
 
-import {Product} from './models/product.model';
+import {Product} from '../models/product.model';
 import {Subject} from 'rxjs/Subject';
 
 @Injectable()

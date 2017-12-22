@@ -4,7 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 
 import { Observable } from 'rxjs/Observable';
-import {Product} from '../../shared/models/product.model';
+import {Product} from '../shop/models/product.model';
 
 @Component({
   selector: 'content',

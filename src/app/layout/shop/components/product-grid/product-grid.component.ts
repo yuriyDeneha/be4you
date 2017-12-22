@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Product} from '../../../shared/models/product.model';
-import {GridStructureMode} from '../../../shared/models/product-grid-structure.type';
+import {Product} from '../../models/product.model';
+import {GridStructureMode} from '../../../../shared/models/product-grid-structure.type';
 import {Observable} from "rxjs/Observable";
 
 @Component({

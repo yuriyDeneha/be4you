@@ -15,7 +15,7 @@ import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 //Material design modules
 import {MatButtonModule, MatInputModule, MatTooltipModule} from '@angular/material';
 
-import {ProductsService} from './shared/products.service';
+import {ProductsService} from './layout/shop/services/products.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
@@ -27,6 +27,9 @@ import { WaveEffectComponent } from './common/wave-effect/wave-effect.component'
 import { DataInputComponent } from './common/data-input/data-input.component';
 import { UserFormInfoComponent } from './layout/home/quick-order/user-form-info/user-form-info.component';
 import { ChooseFlowersComponent } from './layout/home/quick-order/choose-flowers/choose-flowers.component';
+import { SignInComponent } from './auth/components/sign-in/sign-in.component';
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './auth/components/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -41,6 +44,9 @@ import { ChooseFlowersComponent } from './layout/home/quick-order/choose-flowers
     DataInputComponent,
     UserFormInfoComponent,
     ChooseFlowersComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     CommonModule,

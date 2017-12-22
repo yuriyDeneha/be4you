@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ProductsService} from "../../../../shared/products.service";
+import {ProductsService} from "../../../services/products.service";
 
 @Component({
   selector: 'color-pallete',
