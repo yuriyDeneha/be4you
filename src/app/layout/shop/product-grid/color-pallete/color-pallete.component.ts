@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ProductsService} from "../../../../shared/products.service";
 
 @Component({
   selector: 'color-pallete',
@@ -10,25 +11,14 @@ export class ColorPalleteComponent implements OnInit {
   @Input() selectedColors;
   @Output() searchByColor: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
-  colors: object[] = [
-    {id: 0, name: '#a80409' },
-    {id: 1, name: '#C51531' },
-    {id: 2, name: '#ed6750' },
-    {id: 3, name: '#F39EA8' },
-    {id: 4, name: '#ffd1f2' },
-    {id: 5, name: '#a92e9c' },
-    {id: 6, name: '#895eee' },
-    // {id: 7, name: '#1580B6' },
-    // {id: 8, name: '#0aa05a' },
-    {id: 9, name: '#ffdf68' },
-    {id: 10, name: '#faffd6' },
-    {id: 11, name: '#ffffff' }
-  ];
+  colors: object[];
 
 
   ngOnInit() {
+    this.productsService.fetchColors()
+      .subscribe(colors => this.colors = this.productsService.addIdsToItems(colors) );
   }
 
   selectColor(color) {

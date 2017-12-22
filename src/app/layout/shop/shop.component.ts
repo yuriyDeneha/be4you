@@ -21,6 +21,7 @@ export class ShopComponent implements OnInit {
   ngOnInit() {
     // this.productsService.seedFireDatabase();
 
+
     this.productsService.getProducts()
       .subscribe(items => {
 
@@ -31,10 +32,12 @@ export class ShopComponent implements OnInit {
   }
 
   searchByColor() {
-    this.productsService.selectedColors$.next(this.selectedColors[0]);
+    // this.productsService.selectedColors$.next(this.selectedColors[this.selectedColors.length - 1]);
   }
 
   toggleFavoriteState() {
     // this.favorites.open = !this.favorites.open;
   }
+
+
 }

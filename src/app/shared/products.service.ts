@@ -11,25 +11,28 @@ export class ProductsService {
 
   productsPath = '/flowers';
   favoritesPath = '/favorites';
+  colorsPath = '/colors';
 
-  selectedColors$ = new Subject<number>();
+  products: Product[];
 
   favoritesRef: AngularFireList<Product> = this.db.list<Product>(this.favoritesPath);
 
   productsRef: AngularFireList<Product>  = this.db.list<Product>(this.productsPath);
 
+  colorsRef: AngularFireList<any>  = this.db.list<any>(this.colorsPath);
+
 
   constructor(private db: AngularFireDatabase) { }
 
   getProducts() {
-    return this.selectedColors$.switchMap(color =>
-      this.db.list(this.productsPath, ref => this.checkByQuery(ref, color)
-      ).snapshotChanges()
-    );
+    return this.productsRef.snapshotChanges();
   }
 
-  addToProducts(product) {
-    return this.productsRef.push(product);
+  addToProducts(product, color, price = 1) {
+    this.productsRef.push(product)
+      .then ( (data) =>
+        this.db.list(`${this.colorsPath}/${color}/products`).push(data.key)
+      );
   }
 
   getFavorites() {
@@ -59,16 +62,8 @@ export class ProductsService {
     return color > -1 ? ref.orderByChild('color').equalTo(color) : ref;
   }
 
-  seedFireDatabase() {
-    this.favoritesRef.snapshotChanges().subscribe(items => {
-      this.addIdsToItems(items).forEach( item => {
-        console.log('int');
-        delete item.$key;
-        item['color'] = 1;
-        this.productsRef.push({...item})
-          .then ( result => console.log(result));
-      });
-    });
+  fetchColors() {
+    return this.colorsRef.snapshotChanges();
   }
 
 }
