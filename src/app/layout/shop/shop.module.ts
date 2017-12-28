@@ -8,7 +8,6 @@ import {ProductFilterComponent} from './components/product-grid/product-filter/p
 import {ProductItemComponent} from './components/product-grid/product-item/product-item.component';
 import {FavoriteItemComponent} from './components/favorites/favorite-item/favorite-item.component';
 import {FavoritesComponent} from './components/favorites/favorites.component';
-import {CatalogComponent} from './catalog/catalog.component';
 import {SelectGridStructureComponent} from './components/product-grid/select-grid-structure/select-grid-structure.component';
 import {ShopComponent} from './shop.component';
 
@@ -23,7 +22,6 @@ import {ColorPalleteComponent} from './components/product-grid/color-pallete/col
   ],
   declarations: [
     ShopComponent,
-    CatalogComponent,
     ProductGridComponent,
     ProductItemComponent,
     ProductFilterComponent,

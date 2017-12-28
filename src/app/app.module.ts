@@ -20,7 +20,6 @@ import {ProductsService} from './layout/shop/services/products.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
-import { ContentComponent } from './layout/content/content.component';
 import { AuthComponent } from './auth/auth.component';
 import { QuickOrderComponent } from './layout/home/quick-order/quick-order.component';
 import { WaveEffectComponent } from './shared/components/wave-effect/wave-effect.component';
@@ -37,7 +36,6 @@ import { ForgotPasswordComponent } from './auth/components/forgot-password/forgo
     AppComponent,
     HomeComponent,
     TopBarComponent,
-    ContentComponent,
     AuthComponent,
     QuickOrderComponent,
     WaveEffectComponent,
