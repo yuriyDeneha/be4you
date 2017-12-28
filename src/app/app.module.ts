@@ -20,15 +20,12 @@ import {ProductsService} from './layout/shop/services/products.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
-import { AuthComponent } from './auth/auth.component';
 import { QuickOrderComponent } from './layout/home/quick-order/quick-order.component';
 import { WaveEffectComponent } from './shared/components/wave-effect/wave-effect.component';
 import { DataInputComponent } from './shared/components/data-input/data-input.component';
 import { UserFormInfoComponent } from './layout/home/quick-order/user-form-info/user-form-info.component';
 import { ChooseFlowersComponent } from './layout/home/quick-order/choose-flowers/choose-flowers.component';
-import { SignInComponent } from './auth/components/sign-in/sign-in.component';
-import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './auth/components/forgot-password/forgot-password.component';
+
 
 
 @NgModule({
@@ -36,15 +33,11 @@ import { ForgotPasswordComponent } from './auth/components/forgot-password/forgo
     AppComponent,
     HomeComponent,
     TopBarComponent,
-    AuthComponent,
     QuickOrderComponent,
     WaveEffectComponent,
     DataInputComponent,
     UserFormInfoComponent,
     ChooseFlowersComponent,
-    SignInComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
   ],
   imports: [
     CommonModule,
